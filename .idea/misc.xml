@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/activity_registrar_anticipo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/activity_registrar_comprobante.xml" value="0.264" />
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/activity_registrar_evaluacion_anticipo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/activity_registrar_rendicion_activity.xml" value="0.4" />
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/cardview_comprobante.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android_Proyectos/pry_dam/app-movil-intelect-1/app/src/main/res/layout/cardview_historial_anticipo.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/irobe/Documents/ServiciosWeb/app/src/main/res/drawable/side_nav_bar.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/irobe/Documents/ServiciosWeb/app/src/main/res/layout/acticity_registrar_anticipo.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/irobe/Documents/ServiciosWeb/app/src/main/res/layout/activity_login.xml" value="0.2504528985507246" />
@@ -69,7 +75,7 @@
       </value>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

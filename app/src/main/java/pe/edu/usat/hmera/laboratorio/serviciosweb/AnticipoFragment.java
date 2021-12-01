@@ -28,7 +28,7 @@ import pe.edu.usat.hmera.laboratorio.serviciosweb.util.Helper;
 
 public class AnticipoFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
 
-    ArrayList<Anticipo> listaAnticiposTemporal;
+    ArrayList<Anticipo> listaAnticiposTemporal,listaEstadoAnticipo;
     AdaptadorAnticipo adaptadorAnticipo;
     ProgressDialog progressDialog;
     RecyclerView recyclerView;
@@ -79,8 +79,19 @@ public class AnticipoFragment extends Fragment implements SwipeRefreshLayout.OnR
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnRegistrarAnticipo:
-                Intent intent = new Intent(this.getActivity(), RegistrarAnticipoActivity.class);
-                startActivity(intent);
+                int estadosRestrictores = 0;
+                for (Anticipo a : AdaptadorAnticipo.listaAnticipo){
+                    if (a.getEstado().equalsIgnoreCase("Registrado") || a.getEstado().equalsIgnoreCase("Observado") || a.getEstado().equalsIgnoreCase("Rendido") ) {
+                        estadosRestrictores++;
+                    }
+                }
+                if (estadosRestrictores > 0)
+                    Helper.mensajeError(this.getActivity(),"Atención","Usted no puede registrar otro anticipo debido a que tiene uno en proceso");
+                else{
+                    Intent intent = new Intent(this.getActivity(), RegistrarAnticipoActivity.class);
+                    startActivity(intent);
+                }
+
         }
     }
 
@@ -118,7 +129,7 @@ public class AnticipoFragment extends Fragment implements SwipeRefreshLayout.OnR
                     resultado = false;
                 }
             } catch (JSONException jsonException) {
-                jsonException.printStackTrace();
+
             }
             return resultado;
         }
@@ -144,4 +155,5 @@ public class AnticipoFragment extends Fragment implements SwipeRefreshLayout.OnR
         recyclerView.setAdapter(adaptadorAnticipo);
         new AnticipoTask().execute();
     }
+
 }

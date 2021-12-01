@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarRendicionActicity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rubro"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"/>
+        <Spinner
+            android:id="@+id/spRubro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"></Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"/>
+        <EditText
+            android:id="@+id/txtDescipcionComprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Comprobante"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"/>
+        <Spinner
+            android:id="@+id/spTipoComprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"></Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Serie" />
+                <EditText
+                    android:id="@+id/txtSerieComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+
+            </LinearLayout>
+            <android.support.v4.widget.Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Coorelativo" />
+                <EditText
+                    android:id="@+id/txtCorrelativoComprobante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha de emision"
+            android:paddingTop="15dp"
+            android:layout_marginHorizontal="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/txtFechaEmision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:textAlignment="center" />
+            <android.support.v4.widget.Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imgFechaInicio"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_baseline_calendar" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monto Total"
+            android:paddingTop="15dp"
+            android:layout_marginHorizontal="20dp"/>
+        <EditText
+            android:id="@+id/txtMontoTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnRegistrarComprobante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#264653"
+            android:text="REGISTRAR COMPROBANTE"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
